@@ -5,9 +5,9 @@
  */
 package Formulario;
 
-import AGenetico.Algoritmo;
+import AGenetico.Algorithm;
 import AGenetico.Individuo;
-import AGenetico.Poblacion;
+import AGenetico.Population;
 import com.sun.glass.events.KeyEvent;
 import java.awt.Component;
 import java.io.BufferedReader;
@@ -23,7 +23,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import Modelo.Dataset;
-import AGenetico.Poblacion;
+import AGenetico.Population;
 import static Modelo.Dataset.Index_V;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -300,8 +300,8 @@ public class frame extends javax.swing.JFrame {
         int iteration = Integer.valueOf(txt_iteration.getText());
         float fitness = Float.valueOf(txt_fitness.getText().replace(",", "."));
         boolean no_solution = check_solution.isSelected();
-        Algoritmo.Iniciar(iteration, size_population, variables, fitness,no_solution);
-        
+        Algorithm algorithm = new Algorithm();
+        algorithm.Init(iteration, size_population, variables, fitness,no_solution);
     }//GEN-LAST:event_btn_runActionPerformed
 
     private void txt_populationKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_populationKeyPressed

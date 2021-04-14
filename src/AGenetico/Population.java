@@ -14,7 +14,7 @@ import java.security.SecureRandom;
  *
  * @author DHL-SIS-ING
  */
-public final class Poblacion {
+public final class Population {
     
     Individuo[] _Individuos;
     Dataset dataset;
@@ -22,13 +22,13 @@ public final class Poblacion {
     int value = 0;
     public static ArrayList item_data;
     
-    public Poblacion(int size){
+    public Population(int size){
         _Individuos = new Individuo[size];
         size_population = size;
     }
     
     // Crear población Inicial
-    public Poblacion(int size, ArrayList variable) 
+    public Population(int size, ArrayList variable) 
     {
         try{
             _Individuos = new Individuo[size];
