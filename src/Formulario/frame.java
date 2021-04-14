@@ -60,23 +60,23 @@ public class frame extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        Btn_Cargar = new javax.swing.JButton();
-        Txt_File = new javax.swing.JTextField();
+        btn_load = new javax.swing.JButton();
+        txt_file = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Atx_Campo = new javax.swing.JTextArea();
-        Btn_Ejecutar = new javax.swing.JButton();
+        txt_result = new javax.swing.JTextArea();
+        btn_run = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        Jtable_Attr = new javax.swing.JTable();
+        Jtable_Attribute = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
-        Txt_poblacion = new javax.swing.JTextField();
-        Txt_Iteracion = new javax.swing.JTextField();
+        txt_population = new javax.swing.JTextField();
+        txt_iteration = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        Txt_Soporte = new javax.swing.JTextField();
+        txt_fitness = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        Chck_Solucion = new javax.swing.JCheckBox();
+        check_solution = new javax.swing.JCheckBox();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,10 +106,10 @@ public class frame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Btn_Cargar.setText("..");
-        Btn_Cargar.addActionListener(new java.awt.event.ActionListener() {
+        btn_load.setText("..");
+        btn_load.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_CargarActionPerformed(evt);
+                btn_loadActionPerformed(evt);
             }
         });
 
@@ -119,22 +119,22 @@ public class frame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Genetic Algorithm");
 
-        Atx_Campo.setColumns(20);
-        Atx_Campo.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
-        Atx_Campo.setRows(5);
-        jScrollPane1.setViewportView(Atx_Campo);
+        txt_result.setColumns(20);
+        txt_result.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        txt_result.setRows(5);
+        jScrollPane1.setViewportView(txt_result);
 
-        Btn_Ejecutar.setText("Run");
-        Btn_Ejecutar.addActionListener(new java.awt.event.ActionListener() {
+        btn_run.setText("Run");
+        btn_run.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_EjecutarActionPerformed(evt);
+                btn_runActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Attributes");
 
-        Jtable_Attr.setModel(new javax.swing.table.DefaultTableModel(
+        Jtable_Attribute.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -150,38 +150,38 @@ public class frame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        Jtable_Attr.addMouseListener(new java.awt.event.MouseAdapter() {
+        Jtable_Attribute.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Jtable_AttrMouseClicked(evt);
+                Jtable_AttributeMouseClicked(evt);
             }
         });
-        jScrollPane4.setViewportView(Jtable_Attr);
-        if (Jtable_Attr.getColumnModel().getColumnCount() > 0) {
-            Jtable_Attr.getColumnModel().getColumn(0).setPreferredWidth(30);
-            Jtable_Attr.getColumnModel().getColumn(0).setMaxWidth(30);
-            Jtable_Attr.getColumnModel().getColumn(1).setPreferredWidth(20);
-            Jtable_Attr.getColumnModel().getColumn(1).setMaxWidth(20);
+        jScrollPane4.setViewportView(Jtable_Attribute);
+        if (Jtable_Attribute.getColumnModel().getColumnCount() > 0) {
+            Jtable_Attribute.getColumnModel().getColumn(0).setPreferredWidth(30);
+            Jtable_Attribute.getColumnModel().getColumn(0).setMaxWidth(30);
+            Jtable_Attribute.getColumnModel().getColumn(1).setPreferredWidth(20);
+            Jtable_Attribute.getColumnModel().getColumn(1).setMaxWidth(20);
         }
 
         jLabel4.setText("Population");
 
-        Txt_poblacion.addKeyListener(new java.awt.event.KeyAdapter() {
+        txt_population.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                Txt_poblacionKeyPressed(evt);
+                txt_populationKeyPressed(evt);
             }
         });
 
         jLabel5.setText("Iteration");
 
-        Txt_Soporte.addKeyListener(new java.awt.event.KeyAdapter() {
+        txt_fitness.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                Txt_SoporteKeyPressed(evt);
+                txt_fitnessKeyPressed(evt);
             }
         });
 
-        jLabel6.setText("Support");
+        jLabel6.setText("Fitness");
 
-        Chck_Solucion.setText("No Solution Support");
+        check_solution.setText("No Solution Fitness");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -193,9 +193,9 @@ public class frame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(Txt_File)
+                        .addComponent(txt_file)
                         .addGap(14, 14, 14)
-                        .addComponent(Btn_Cargar))
+                        .addComponent(btn_load))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -209,20 +209,20 @@ public class frame extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Txt_poblacion, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_population, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Txt_Iteracion, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_iteration, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(157, 157, 157))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addGap(18, 18, 18)
-                                        .addComponent(Txt_Soporte, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_fitness, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(10, 10, 10)
-                                        .addComponent(Chck_Solucion)
+                                        .addComponent(check_solution)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Btn_Ejecutar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btn_run, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(67, 67, 67)))))))
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
@@ -237,8 +237,8 @@ public class frame extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Btn_Cargar)
-                    .addComponent(Txt_File, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_load)
+                    .addComponent(txt_file, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -250,17 +250,17 @@ public class frame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Txt_poblacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_population, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel4))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Txt_Iteracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_iteration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel5)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Txt_Soporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_fitness, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
-                            .addComponent(Chck_Solucion)
-                            .addComponent(Btn_Ejecutar))
+                            .addComponent(check_solution)
+                            .addComponent(btn_run))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -269,45 +269,52 @@ public class frame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn_CargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CargarActionPerformed
+    private void btn_loadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loadActionPerformed
         
-        String data = Devolver_Archivo(Txt_File);
+        String data = Devolver_Archivo(txt_file);
         
-    }//GEN-LAST:event_Btn_CargarActionPerformed
+    }//GEN-LAST:event_btn_loadActionPerformed
 
-    private void Btn_EjecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_EjecutarActionPerformed
-        if (Txt_Soporte.getText() == null) {
-            JOptionPane.showMessageDialog(null, "Error ingrese el soporte", "ERROR", JOptionPane.ERROR_MESSAGE);
+    private void btn_runActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_runActionPerformed
+        //Validation
+        if(txt_population.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Error enter size population", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }else if(txt_iteration.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Error enter number iteration", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }else if (txt_fitness.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Error enter the desired fitness", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        //Limpiar
-        Formulario.frame.Atx_Campo.setText("");
+        //Clean
+        frame.txt_result.setText("");
         variables = new ArrayList<>();
-        //Obtener variables Seleccionadas
-        for (int i = 0; i < Jtable_Attr.getRowCount(); i++) {
-            if (Boolean.valueOf(Jtable_Attr.getValueAt(i, 1).toString())) {
+        //Get Selected Variables
+        for (int i = 0; i < Jtable_Attribute.getRowCount(); i++) {
+            if (Boolean.valueOf(Jtable_Attribute.getValueAt(i, 1).toString())) {
                 variables.add(i);
             }
         }
-        int sizepoblacion  = Integer.valueOf(Txt_poblacion.getText());
-        int iteracion = Integer.valueOf(Txt_Iteracion.getText());
-        float soporte = Float.valueOf(Txt_Soporte.getText().replace(",", "."));
-        boolean nosolucion = Chck_Solucion.isSelected();
-        Algoritmo.Iniciar(iteracion, sizepoblacion, variables, soporte,nosolucion);
+        int size_population  = Integer.valueOf(txt_population.getText());
+        int iteration = Integer.valueOf(txt_iteration.getText());
+        float fitness = Float.valueOf(txt_fitness.getText().replace(",", "."));
+        boolean no_solution = check_solution.isSelected();
+        Algoritmo.Iniciar(iteration, size_population, variables, fitness,no_solution);
         
-    }//GEN-LAST:event_Btn_EjecutarActionPerformed
+    }//GEN-LAST:event_btn_runActionPerformed
 
-    private void Txt_poblacionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Txt_poblacionKeyPressed
+    private void txt_populationKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_populationKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Txt_poblacionKeyPressed
+    }//GEN-LAST:event_txt_populationKeyPressed
 
-    private void Jtable_AttrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jtable_AttrMouseClicked
+    private void Jtable_AttributeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jtable_AttributeMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_Jtable_AttrMouseClicked
+    }//GEN-LAST:event_Jtable_AttributeMouseClicked
 
-    private void Txt_SoporteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Txt_SoporteKeyPressed
+    private void txt_fitnessKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_fitnessKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Txt_SoporteKeyPressed
+    }//GEN-LAST:event_txt_fitnessKeyPressed
 
     public String Devolver_Archivo(JTextField texto) {
         File f;
@@ -340,7 +347,7 @@ public class frame extends javax.swing.JFrame {
     public void Cargar_Conjunto(){
         
         try{
-            DefaultTableModel modelo = (DefaultTableModel)Jtable_Attr.getModel();
+            DefaultTableModel modelo = (DefaultTableModel)Jtable_Attribute.getModel();
             //Limpiar Data
             modelo.setRowCount(0);
             ArrayList rt = data.getRotulo();
@@ -388,15 +395,10 @@ public class frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JTextArea Atx_Campo;
-    private javax.swing.JButton Btn_Cargar;
-    private javax.swing.JButton Btn_Ejecutar;
-    private javax.swing.JCheckBox Chck_Solucion;
-    private javax.swing.JTable Jtable_Attr;
-    private javax.swing.JTextField Txt_File;
-    private javax.swing.JTextField Txt_Iteracion;
-    private javax.swing.JTextField Txt_Soporte;
-    private javax.swing.JTextField Txt_poblacion;
+    private javax.swing.JTable Jtable_Attribute;
+    private javax.swing.JButton btn_load;
+    private javax.swing.JButton btn_run;
+    private javax.swing.JCheckBox check_solution;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -409,5 +411,10 @@ public class frame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTextField txt_file;
+    private javax.swing.JTextField txt_fitness;
+    private javax.swing.JTextField txt_iteration;
+    private javax.swing.JTextField txt_population;
+    public static javax.swing.JTextArea txt_result;
     // End of variables declaration//GEN-END:variables
 }

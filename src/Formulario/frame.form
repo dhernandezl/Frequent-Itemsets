@@ -73,9 +73,9 @@
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Txt_File" max="32767" attributes="0"/>
+                      <Component id="txt_file" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="Btn_Cargar" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_load" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -91,21 +91,21 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="Txt_poblacion" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Component id="txt_population" min="-2" pref="74" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="Txt_Iteracion" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="txt_iteration" min="-2" pref="66" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="Txt_Soporte" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Component id="txt_fitness" min="-2" pref="74" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Component id="Chck_Solucion" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_solution" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="Btn_Ejecutar" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="btn_run" min="-2" pref="71" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -129,8 +129,8 @@
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Btn_Cargar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Txt_File" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_load" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_file" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -144,20 +144,20 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="Txt_poblacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_population" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="Txt_Iteracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_iteration" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Txt_Soporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_fitness" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Chck_Solucion" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Btn_Ejecutar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_solution" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_run" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="247" max="-2" attributes="0"/>
@@ -169,15 +169,15 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="Btn_Cargar">
+    <Component class="javax.swing.JButton" name="btn_load">
       <Properties>
         <Property name="text" type="java.lang.String" value=".."/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_CargarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_loadActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="Txt_File">
+    <Component class="javax.swing.JTextField" name="txt_file">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -202,7 +202,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="Atx_Campo">
+        <Component class="javax.swing.JTextArea" name="txt_result">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -216,12 +216,12 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="Btn_Ejecutar">
+    <Component class="javax.swing.JButton" name="btn_run">
       <Properties>
         <Property name="text" type="java.lang.String" value="Run"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_EjecutarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_runActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -239,7 +239,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="Jtable_Attr">
+        <Component class="javax.swing.JTable" name="Jtable_Attribute">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="3" rowCount="0">
@@ -272,7 +272,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Jtable_AttrMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Jtable_AttributeMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
@@ -282,31 +282,31 @@
         <Property name="text" type="java.lang.String" value="Population"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="Txt_poblacion">
+    <Component class="javax.swing.JTextField" name="txt_population">
       <Events>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Txt_poblacionKeyPressed"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_populationKeyPressed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="Txt_Iteracion">
+    <Component class="javax.swing.JTextField" name="txt_iteration">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="text" type="java.lang.String" value="Iteration"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="Txt_Soporte">
+    <Component class="javax.swing.JTextField" name="txt_fitness">
       <Events>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Txt_SoporteKeyPressed"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_fitnessKeyPressed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Support"/>
+        <Property name="text" type="java.lang.String" value="Fitness"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="Chck_Solucion">
+    <Component class="javax.swing.JCheckBox" name="check_solution">
       <Properties>
-        <Property name="text" type="java.lang.String" value="No Solution Support"/>
+        <Property name="text" type="java.lang.String" value="No Solution Fitness"/>
       </Properties>
     </Component>
   </SubComponents>
