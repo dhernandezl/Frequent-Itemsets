@@ -68,11 +68,6 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="329" max="32767" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
@@ -87,39 +82,43 @@
                           <Component id="jScrollPane4" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="88" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="Txt_poblacion" min="-2" pref="74" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="Txt_Iteracion" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="Txt_Soporte" min="-2" pref="74" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Txt_Soporte" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Component id="Chck_Solucion" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="Btn_Ejecutar" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="Btn_Ejecutar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="276" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -185,7 +184,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="DataSet"/>
+        <Property name="text" type="java.lang.String" value="Dataset"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -193,7 +192,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Algoritmo Gen&#xe9;tico"/>
+        <Property name="text" type="java.lang.String" value="Genetic Algorithm"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -219,7 +218,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="Btn_Ejecutar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ejecutar"/>
+        <Property name="text" type="java.lang.String" value="Run"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_EjecutarActionPerformed"/>
@@ -230,7 +229,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Atributos"/>
+        <Property name="text" type="java.lang.String" value="Attributes"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -246,7 +245,7 @@
               <Table columnCount="3" rowCount="0">
                 <Column editable="true" title="No." type="java.lang.Integer"/>
                 <Column editable="true" title="" type="java.lang.Boolean"/>
-                <Column editable="true" title="Nombre" type="java.lang.String"/>
+                <Column editable="true" title="Name" type="java.lang.String"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -280,7 +279,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Poblaci&#xf3;n"/>
+        <Property name="text" type="java.lang.String" value="Population"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Txt_poblacion">
@@ -292,7 +291,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Iteraci&#xf3;n"/>
+        <Property name="text" type="java.lang.String" value="Iteration"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Txt_Soporte">
@@ -302,12 +301,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Soporte"/>
+        <Property name="text" type="java.lang.String" value="Support"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="Chck_Solucion">
       <Properties>
-        <Property name="text" type="java.lang.String" value="No Soluci&#xf3;n Soporte"/>
+        <Property name="text" type="java.lang.String" value="No Solution Support"/>
       </Properties>
     </Component>
   </SubComponents>

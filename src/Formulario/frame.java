@@ -114,17 +114,17 @@ public class frame extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setText("DataSet");
+        jLabel1.setText("Dataset");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Algoritmo Genético");
+        jLabel2.setText("Genetic Algorithm");
 
         Atx_Campo.setColumns(20);
         Atx_Campo.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
         Atx_Campo.setRows(5);
         jScrollPane1.setViewportView(Atx_Campo);
 
-        Btn_Ejecutar.setText("Ejecutar");
+        Btn_Ejecutar.setText("Run");
         Btn_Ejecutar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_EjecutarActionPerformed(evt);
@@ -132,14 +132,14 @@ public class frame extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("Atributos");
+        jLabel3.setText("Attributes");
 
         Jtable_Attr.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "No.", "", "Nombre"
+                "No.", "", "Name"
             }
         ) {
             Class[] types = new Class [] {
@@ -163,7 +163,7 @@ public class frame extends javax.swing.JFrame {
             Jtable_Attr.getColumnModel().getColumn(1).setMaxWidth(20);
         }
 
-        jLabel4.setText("Población");
+        jLabel4.setText("Population");
 
         Txt_poblacion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -171,7 +171,7 @@ public class frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Iteración");
+        jLabel5.setText("Iteration");
 
         Txt_Soporte.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -179,18 +179,14 @@ public class frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Soporte");
+        jLabel6.setText("Support");
 
-        Chck_Solucion.setText("No Solución Soporte");
+        Chck_Solucion.setText("No Solution Support");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(329, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(216, 216, 216))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -204,13 +200,12 @@ public class frame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1))
+                            .addComponent(jScrollPane1)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(0, 88, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -218,17 +213,22 @@ public class frame extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Txt_Iteracion, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Txt_Iteracion, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(157, 157, 157))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(Txt_Soporte, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(Chck_Solucion)))
-                                .addGap(19, 19, 19)
-                                .addComponent(Btn_Ejecutar)
-                                .addGap(87, 87, 87)))))
+                                        .addComponent(Txt_Soporte, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(Chck_Solucion)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Btn_Ejecutar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(67, 67, 67)))))))
                 .addGap(27, 27, 27))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(276, 276, 276)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
