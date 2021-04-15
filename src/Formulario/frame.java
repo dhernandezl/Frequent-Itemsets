@@ -5,9 +5,9 @@
  */
 package Formulario;
 
-import AGenetico.Algorithm;
-import AGenetico.Individuo;
-import AGenetico.Population;
+import Algorithm.Algorithm;
+import Algorithm.Individual;
+import Algorithm.Population;
 import com.sun.glass.events.KeyEvent;
 import java.awt.Component;
 import java.io.BufferedReader;
@@ -23,7 +23,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import Modelo.Dataset;
-import AGenetico.Population;
+import Algorithm.Population;
 import static Modelo.Dataset.Index_V;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

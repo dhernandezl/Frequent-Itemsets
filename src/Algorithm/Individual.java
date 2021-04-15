@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AGenetico;
+package Algorithm;
 
 import Modelo.Dataset;
 import java.util.Random;
@@ -11,7 +11,7 @@ import java.util.Random;
  *
  * @author DHL-SIS-ING
  */
-public class Individuo {
+public class Individual {
     
     private int _Largo = 11;
     private byte[] _Genes = new byte [_Largo];
@@ -23,7 +23,7 @@ public class Individuo {
     
     
     
-    public Individuo(){
+    public Individual(){
         for (int i = 0; i < _Largo; i++) 
         {
             byte Gen = (byte) Math.round(Math.random());

@@ -1,6 +1,6 @@
-package AGenetico;
+package Algorithm;
 
-import static AGenetico.Population.binarioADecimal;
+import static Algorithm.Population.binarioADecimal;
 import Modelo.Dataset;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -120,9 +120,9 @@ public class Algorithm {
         // Loop over the population size and create new individuals with
         // crossover
         for (int i = elitismOffset; i < pop.size_population; i++) {
-            Individuo indiv1 = tournamentSelection(pop);
-            Individuo indiv2 = tournamentSelection(pop);
-            Individuo newIndiv = crossover(indiv1, indiv2);
+            Individual indiv1 = tournamentSelection(pop);
+            Individual indiv2 = tournamentSelection(pop);
+            Individual newIndiv = crossover(indiv1, indiv2);
             newPopulation.saveIndivido(i, newIndiv);
         }
         
@@ -147,8 +147,8 @@ public class Algorithm {
     }
     
     // Crossover individuals
-    private Individuo crossover(Individuo indiv1, Individuo indiv2) {
-        Individuo newSol = new Individuo();
+    private Individual crossover(Individual indiv1, Individual indiv2) {
+        Individual newSol = new Individual();
         for (int i = 0; i < newSol.getGenes().length; i++) {
             if (Math.random() <= uniformRate) {
                 newSol.setSingleGene(i, indiv1.getGenes(i));
@@ -160,7 +160,7 @@ public class Algorithm {
     }
 
     // Mutate an individual
-    private void mutate(Individuo indiv) {
+    private void mutate(Individual indiv) {
         for (int i = 0; i < indiv.getLargo(); i++) {
             if (Math.random() <= mutationRate) {
                 byte gene = (byte) Math.round(Math.random());
@@ -169,7 +169,7 @@ public class Algorithm {
         }
     }
 
-    private Individuo tournamentSelection(Population pop) {
+    private Individual tournamentSelection(Population pop) {
         // Create a tournament population
         Population tournament = new Population(tournamentSize);
         // For each place in the tournament get a random individual
@@ -178,7 +178,7 @@ public class Algorithm {
             tournament.saveIndivido(i, pop.getIndividuos(randomId));
         }
         // Get the fittest
-        Individuo fittest = tournament.getFittest();
+        Individual fittest = tournament.getFittest();
         return fittest;
     }
     
