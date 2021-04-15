@@ -3,6 +3,10 @@ A frequent pattern can be defined as a frequent subset, defined in the universe 
 
 ### Features
 
+### Installation
+- Run
+Execution using .jar - Download release
+
 ### Get the source
 Clone the Git repository from GitHub
 ```github
