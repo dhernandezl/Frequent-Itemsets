@@ -270,9 +270,7 @@ public class frame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_loadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loadActionPerformed
-        
-        String data = Devolver_Archivo(txt_file);
-        
+        String data = getFile(txt_file);
     }//GEN-LAST:event_btn_loadActionPerformed
 
     private void btn_runActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_runActionPerformed
@@ -316,7 +314,7 @@ public class frame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_fitnessKeyPressed
 
-    public String Devolver_Archivo(JTextField texto) {
+    public String getFile(JTextField texto) {
         File f;
         javax.swing.JFileChooser j = new javax.swing.JFileChooser();
         j.showOpenDialog(j);
@@ -338,17 +336,17 @@ public class frame extends javax.swing.JFrame {
                 data.Llenar_Data(datos);
                 line = br.readLine();
             }
-            Cargar_Conjunto();
+            Load_Set();
         } catch (IOException e) {
         }
         return lectura;
     }
     
-    public void Cargar_Conjunto(){
+    public void Load_Set(){
         
         try{
             DefaultTableModel modelo = (DefaultTableModel)Jtable_Attribute.getModel();
-            //Limpiar Data
+            //Clear Data
             modelo.setRowCount(0);
             ArrayList rt = data.getRotulo();
             for (int i = 0; i < rt.size(); i++) {
