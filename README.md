@@ -4,7 +4,7 @@ A frequent pattern can be defined as a frequent subset, defined in the universe 
 ### Features
 
 ### Installation
-- Run/
+- Run\
 Execution using .jar - <a href="https://github.com/dhernandezl/frequent_itemsets/releases" target="_blank">Download release</b></a>
 
 ### Get the source
