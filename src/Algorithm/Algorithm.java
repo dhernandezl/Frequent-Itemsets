@@ -1,6 +1,6 @@
 package Algorithm;
 
-import static Algorithm.Population.binarioADecimal;
+import static Algorithm.Population.binaryToDecimal;
 import Modelo.Dataset;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -106,7 +106,7 @@ public class Algorithm {
         Population newPopulation = new Population(pop.size_population);
         // Keep our best individual
         if (elitism) {
-            newPopulation.saveIndivido(0, pop.getFittest());
+            newPopulation.saveIndividual(0, pop.getFittest());
         }
 
         // Crossover population
@@ -129,7 +129,7 @@ public class Algorithm {
         // Mutate population
         for (int i = elitismOffset; i < pop.size_population; i++) {
             mutate(newPopulation.getIndividuals(i));
-            int numero = binarioADecimal(newPopulation.getIndividuals(i).toString());
+            int numero = binaryToDecimal(newPopulation.getIndividuals(i).toString());
             if((numero < Dataset.getSize())&&( numero >=0)){
                 newPopulation.getIndividuals(i).setIndex(numero);
                 newPopulation.getIndividuals(i).Inicializar_ItemV(_variables.size());
