@@ -6,24 +6,21 @@
 package AGenetico;
 
 import java.util.ArrayList;
-import java.util.Random;
 import Modelo.Dataset;
-import java.math.BigInteger;
-import java.security.SecureRandom;
 /**
  *
  * @author DHL-SIS-ING
  */
 public final class Population {
     
-    Individuo[] _Individuos;
+    Individual[] _individuals;
     Dataset dataset;
     int size_population;
     int value = 0;
     public static ArrayList item_data;
     
     public Population(int size){
-        _Individuos = new Individuo[size];
+        _individuals = new Individual[size];
         size_population = size;
     }
     
@@ -31,12 +28,12 @@ public final class Population {
     public Population(int size, ArrayList variable) 
     {
         try{
-            _Individuos = new Individuo[size];
+            _individuals = new Individual[size];
             size_population = size;
             item_data = Modelo.Dataset.dataset;
             for (int i = 0; i < size_population; i++) {
-                Individuo newIndividual = Obtener_Individuo(item_data, variable);
-                saveIndivido(i, newIndividual);
+                Individual newIndividual = getIndividual(item_data, variable);
+                saveIndividual(i, newIndividual);
             }
         }catch(Exception e){
             String s = e.getMessage();
@@ -44,23 +41,23 @@ public final class Population {
         }
     }
 
-    //Obtener el Mejor individuo
-    public Individuo getFittest() {
-        Individuo fittest = _Individuos[0];
+    //Get the best individual
+    public Individual getFittest() {
+        Individual fittest = _individuals[0];
         // Loop through individuals to find fittest
         for (int i = 0; i < size_population; i++) {
-            if (fittest.getSoporte() <= getIndividuos(i).getSoporte()) {
-                fittest = getIndividuos(i);
+            if (fittest.getSoporte() <= getIndividuals(i).getSoporte()) {
+                fittest = getIndividuals(i);
             }
         }
         return fittest;
     }
     
-    //Generar Index para poblacion Inicial
-    public Individuo Obtener_Individuo(ArrayList item_data, ArrayList variable){
+    //Generate Index for Initial population
+    public Individual getIndividual(ArrayList item_data, ArrayList variable){
         ArrayList src = null;
-        Individuo ind = new Individuo();
-        int numero = binarioADecimal(ind.toString());
+        Individual ind = new Individual();
+        int numero = binaryToDecimal(ind.toString());
          if ((numero < Dataset.getSize()) && (numero >= 0)) {
              ind.setIndex(numero);
              ind.Inicializar_ItemV(variable.size());
@@ -69,33 +66,33 @@ public final class Population {
                  src = (ArrayList) Dataset.dataset.get(indx);
                  ind.setSingleItemS(i, String.valueOf(src.get(numero)));
              }
-         }else{ind = Obtener_Individuo(item_data, variable);}
+         }else{ind = getIndividual(item_data, variable);}
          return ind;
     }
 
-    public static int binarioADecimal(String numeroBinario) {
-        int longitud = numeroBinario.length();//Numero de digitos que tiene nuestro binario
-        int resultado = 0;//Aqui almacenaremos nuestra respuesta final
+    public static int binaryToDecimal(String numeroBinario) {
+        int longitud = numeroBinario.length();//Number of digits that our binary has
+        int resultado = 0; //Here we will store our final answer
         int potencia = longitud - 1;
-        for (int i = 0; i < longitud; i++) {//recorremos la cadena de numeros
+        for (int i = 0; i < longitud; i++) { //loop through the string of numbers
             if (numeroBinario.charAt(i) == '1') {
                 resultado += Math.pow(2, potencia);
             }
-            potencia--;//drecremantamos la potencia
+            potencia--;//decrease in power
         }
         return resultado;
     }
     
-    public void saveIndivido(int index, Individuo indiv) {
-        _Individuos[index] = indiv;
+    public void saveIndividual(int index, Individual indiv) {
+        _individuals[index] = indiv;
     }
 
-    public Individuo getIndividuos(int index) {
-        return _Individuos[index];
+    public Individual getIndividuals(int index) {
+        return _individuals[index];
     }
 
-    public void setIndividuos(Individuo[] _Individuos) {
-        this._Individuos = _Individuos;
+    public void setIndividuals(Individual[] _individuals) {
+        this._individuals = _individuals;
     }
     
     public int getSize_population() {
