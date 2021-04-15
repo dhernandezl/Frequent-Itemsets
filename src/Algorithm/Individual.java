@@ -5,7 +5,7 @@
  */
 package Algorithm;
 
-import Modelo.Dataset;
+import Model.Dataset;
 import java.util.Random;
 /**
  *

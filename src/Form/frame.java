@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Formulario;
+package Form;
 
 import Algorithm.Algorithm;
 import Algorithm.Individual;
@@ -22,9 +22,9 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-import Modelo.Dataset;
+import Model.Dataset;
 import Algorithm.Population;
-import static Modelo.Dataset.Index_V;
+import static Model.Dataset.Index_V;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

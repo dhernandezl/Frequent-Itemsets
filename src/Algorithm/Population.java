@@ -6,7 +6,7 @@
 package Algorithm;
 
 import java.util.ArrayList;
-import Modelo.Dataset;
+import Model.Dataset;
 /**
  *
  * @author DHL-SIS-ING
@@ -30,7 +30,7 @@ public final class Population {
         try{
             _individuals = new Individual[size];
             size_population = size;
-            item_data = Modelo.Dataset.dataset;
+            item_data = Model.Dataset.dataset;
             for (int i = 0; i < size_population; i++) {
                 Individual newIndividual = getIndividual(item_data, variable);
                 saveIndividual(i, newIndividual);

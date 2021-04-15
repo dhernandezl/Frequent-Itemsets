@@ -1,7 +1,7 @@
 package Algorithm;
 
 import static Algorithm.Population.binaryToDecimal;
-import Modelo.Dataset;
+import Model.Dataset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -53,11 +53,11 @@ public class Algorithm {
         
         int generationCount = 1;
         while(generationCount < iteration){
-            Formulario.frame.txt_result.append("Generation: " + generationCount + " Fitness: " + current_population.getFittest().getSoporte()+"\n"); 
+            Form.frame.txt_result.append("Generation: " + generationCount + " Fitness: " + current_population.getFittest().getSoporte()+"\n"); 
             _memoryTotal += use_memory;
             _timeRunTotal += _timeRun;
-            Formulario.frame.txt_result.append("Used memory: " + use_memory + " MB"+"\n" ); 
-            Formulario.frame.txt_result.append("Tiempo Ejecución: " + _timeRun + " ms"+"\n"); 
+            Form.frame.txt_result.append("Used memory: " + use_memory + " MB"+"\n" ); 
+            Form.frame.txt_result.append("Tiempo Ejecución: " + _timeRun + " ms"+"\n"); 
             _memories.add(use_memory);
             _startTimeRun = System.currentTimeMillis();
             current_population = Evaluate_Population(current_population);
@@ -70,34 +70,34 @@ public class Algorithm {
         }
         
         boolean solution = Solution(fitness);
-        Formulario.frame.txt_result.append("Generation: " + generationCount + " Soporte: "+ current_population.getFittest().getSoporte()+"\n"); 
+        Form.frame.txt_result.append("Generation: " + generationCount + " Soporte: "+ current_population.getFittest().getSoporte()+"\n"); 
         _memoryTotal += use_memory;
         _timeRunTotal += _timeRun;
-        Formulario.frame.txt_result.append("Used memory: " + use_memory + " MB"+"\n" ); 
-        Formulario.frame.txt_result.append("Tiempo Ejecución: " + _timeRun + " ms"+"\n"); 
+        Form.frame.txt_result.append("Used memory: " + use_memory + " MB"+"\n" ); 
+        Form.frame.txt_result.append("Tiempo Ejecución: " + _timeRun + " ms"+"\n"); 
         _memories.add(use_memory);
         
         if (solution) {
-            Formulario.frame.txt_result.append("\n Solution: \n"); 
+            Form.frame.txt_result.append("\n Solution: \n"); 
             ArrayList<ArrayList<String>> keys = new ArrayList<ArrayList<String>>(_solutionList.keySet());
             for (int i = _solutionList.size() - 1; i >= 0; i--) {
-                Formulario.frame.txt_result.append("Items: " + keys.get(i) + " => Fitness: " + _solutionList.get(keys.get(i)) + "\n");
+                Form.frame.txt_result.append("Items: " + keys.get(i) + " => Fitness: " + _solutionList.get(keys.get(i)) + "\n");
             }
         }
         else{
             if (no_solution) {
-                Formulario.frame.txt_result.append("\n Solution: \n"); 
+                Form.frame.txt_result.append("\n Solution: \n"); 
                 ArrayList<ArrayList<String>> keys = new ArrayList<ArrayList<String>>(_solutionList.keySet());
                 for (int i = _solutionList.size()-1; i >= _solutionList.size()-3; i--) {
-                    Formulario.frame.txt_result.append("Items: "+keys.get(i)+" => Fitness: "+_solutionList.get(keys.get(i))+"\n");
+                    Form.frame.txt_result.append("Items: "+keys.get(i)+" => Fitness: "+_solutionList.get(keys.get(i))+"\n");
                 }
             }else{
-                Formulario.frame.txt_result.append("\n Without solution \n"); 
+                Form.frame.txt_result.append("\n Without solution \n"); 
             }
         }
         
-        Formulario.frame.txt_result.append("Total Used Memory: " + _memoryTotal + " Mb \n");
-        Formulario.frame.txt_result.append("Execution Time: " + _timeRunTotal + " ms"+"\n");     
+        Form.frame.txt_result.append("Total Used Memory: " + _memoryTotal + " Mb \n");
+        Form.frame.txt_result.append("Execution Time: " + _timeRunTotal + " ms"+"\n");     
         _memoryTotal = 0; _timeRunTotal = 0;
         _solutionList.clear();
     }
