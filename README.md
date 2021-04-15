@@ -1,3 +1,5 @@
+[![Build Status][travis-image]][travis-url]
+
 # Genetic Algorithm for Frequent ItemSets
 A frequent pattern can be defined as a frequent subset, defined in the universe of all possible sets. Frequent patterns obtained during sequence mining are used in tasks of functional dependency detection, trend prediction, phenomena interpretation and as support decision making in production strategies. This project uses a genetic algorithm to implement new techniques that serve to find frequent patterns.
 
