@@ -123,20 +123,20 @@ public class Algorithm {
             Individual indiv1 = tournamentSelection(pop);
             Individual indiv2 = tournamentSelection(pop);
             Individual newIndiv = crossover(indiv1, indiv2);
-            newPopulation.saveIndivido(i, newIndiv);
+            newPopulation.saveIndividual(i, newIndiv);
         }
         
         // Mutate population
         for (int i = elitismOffset; i < pop.size_population; i++) {
-            mutate(newPopulation.getIndividuos(i));
-            int numero = binarioADecimal(newPopulation.getIndividuos(i).toString());
+            mutate(newPopulation.getIndividuals(i));
+            int numero = binarioADecimal(newPopulation.getIndividuals(i).toString());
             if((numero < Dataset.getSize())&&( numero >=0)){
-                newPopulation.getIndividuos(i).setIndex(numero);
-                newPopulation.getIndividuos(i).Inicializar_ItemV(_variables.size());
+                newPopulation.getIndividuals(i).setIndex(numero);
+                newPopulation.getIndividuals(i).Inicializar_ItemV(_variables.size());
                 for (int j = 0; j < _variables.size(); j++) {
                     int indx = Integer.valueOf(String.valueOf(_variables.get(j)));
                     ArrayList src = (ArrayList) Dataset.dataset.get(indx);
-                    newPopulation.getIndividuos(i).setSingleItemS(j,String.valueOf(src.get(numero)));
+                    newPopulation.getIndividuals(i).setSingleItemS(j,String.valueOf(src.get(numero)));
                 }
             }
             else{
@@ -175,7 +175,7 @@ public class Algorithm {
         // For each place in the tournament get a random individual
         for (int i = 0; i < tournamentSize; i++) {
             int randomId = (int) (Math.random() * pop.size_population);
-            tournament.saveIndivido(i, pop.getIndividuos(randomId));
+            tournament.saveIndividual(i, pop.getIndividuals(randomId));
         }
         // Get the fittest
         Individual fittest = tournament.getFittest();
@@ -186,11 +186,11 @@ public class Algorithm {
         try {
             for (int i = 0; i < poup.size_population; i++) {
                 if (_solutionList.isEmpty()) {
-                    ArrayList list = new ArrayList<>(Arrays.asList(poup._Individuos[i].getItemS()));
-                    _solutionList.put(list, poup._Individuos[i].getSoporte());
+                    ArrayList list = new ArrayList<>(Arrays.asList(poup._individuals[i].getItemS()));
+                    _solutionList.put(list, poup._individuals[i].getSoporte());
                 } else {
-                    ArrayList list = new ArrayList<>(Arrays.asList(poup._Individuos[i].getItemS()));
-                    _solutionList.put(list, poup._Individuos[i].getSoporte());
+                    ArrayList list = new ArrayList<>(Arrays.asList(poup._individuals[i].getItemS()));
+                    _solutionList.put(list, poup._individuals[i].getSoporte());
                 }
             }
         } catch (Exception e) {
