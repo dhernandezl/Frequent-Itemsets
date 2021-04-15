@@ -1,19 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Algorithm;
 
 import Modelo.Dataset;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  *
- * @author DHL-SIS-ING
+ * @author dhernandezl
  */
 public class Fitness {
     
@@ -22,12 +15,12 @@ public class Fitness {
     
     //Problem
     public void setFitness(Population MyPop, int size, ArrayList variable) {
-        String[] ItemDt = null;
-        String[] ItemS = null;
+        String[] ItemDt;
+        String[] ItemS;
         int nsupport = 0;
         ArrayList d = Dataset.dataset;
         for (int i = 0; i < size; i++) {
-            ItemS = MyPop._Individuos[i].getItemS();
+            ItemS = MyPop._individuals[i].getItemS();
             for (int j = 0; j < Dataset.getSize(); j++) {
                 ItemDt = getRow(variable, j);   
                 if (Arrays.equals(ItemS, ItemDt)) {
@@ -36,13 +29,13 @@ public class Fitness {
             }
             double sprt = (double) nsupport/Dataset.getSize();
             nsupport = 0;
-            MyPop._Individuos[i].setSoporte(sprt);
+            MyPop._individuals[i].setSoporte(sprt);
         }    
     }
     
     public String[] getRow(ArrayList variable, int index){
         String[] var = new String[variable.size()];
-        ArrayList rr_var = null;
+        ArrayList rr_var;
         for (int j = 0; j < variable.size(); j++) {
             int nvar = (int) variable.get(j);
             rr_var = Dataset.dataset.get(nvar);
