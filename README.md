@@ -23,7 +23,7 @@ git clone https://github.com/dhernandezl/Frequent-Itemsets
 
 Table of Algorithm Comparisons.
 Algorithm | Memory | Execution time| Fitness
------------- | ------------- | ------------- | -------------
+------------ | :-------------: | :-------------: | :-------------:
 Wilcoxon(GA vs Apriori)| 0.7212767 | 0.4065292663 | -
 Wilcoxon(AprioriClosed vs Apriori)| 0.9593536 | 0.0050620321 | 0.005062032
 Wilcoxon(AprioriClosed vs GA)| 0.7988593 | 0.0050620321 | 0.005062032
