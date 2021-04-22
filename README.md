@@ -31,7 +31,7 @@ Friedman(GA vs Apriori)| 0.9728129 | 0.7804665633 | 1.000000000
 Friedman(AprioriClosed vs Apriori)| 0.5028974 | 0.0006576615 | 0.002296452
 Friedman(AprioriClosed vs GA)| 0.6438272 | 0.0071645092 | 0.002296452
 
-## Result Application
+### Result Application
 
 <img src="./app.png">
 
